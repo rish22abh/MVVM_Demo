@@ -12,7 +12,7 @@ class Repository {
         APIInterface::class.java
     )
     val recipeModelData = MutableLiveData<RecipeModel>()
-    fun getReceipeList(searchText: String) {
+    fun getRecipeList(searchText: String) {
         val callRandomImage: Call<RecipeModel>? = apiInterface.doGetRecipeList(searchText, 1)
         callRandomImage?.enqueue(object : Callback<RecipeModel?> {
             override fun onFailure(call: Call<RecipeModel?>, t: Throwable) {
