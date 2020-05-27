@@ -6,7 +6,7 @@
     <data>
         <variable
             name="handler"
-            type="com.mvvmdemo.EventHandler" />
+            type="com.mvvmdemo.utils.EventHandler" />
 
     </data>
 
@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="16dp"
-        tools:context=".MainActivity">
+        tools:context=".activity.MainActivity">
 
         <androidx.appcompat.widget.AppCompatEditText
             android:id="@+id/edt_search"

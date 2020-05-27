@@ -1,13 +1,15 @@
-package com.mvvmdemo
+package com.mvvmdemo.retrofit
 
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
+import com.mvvmdemo.model.PhotosModel
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
 class Repository {
-    private var apiInterface: APIInterface = APIClient.getClient().create(APIInterface::class.java)
+    private var apiInterface: APIInterface = APIClient.getClient().create(
+        APIInterface::class.java)
     val randomImageModel = MutableLiveData<PhotosModel>()
     fun getRandomImage() {
         val callRandomImage: Call<PhotosModel?>? = apiInterface.doGetRandomImage()

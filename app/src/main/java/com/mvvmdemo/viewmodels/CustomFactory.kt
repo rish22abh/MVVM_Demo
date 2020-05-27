@@ -1,7 +1,8 @@
-package com.mvvmdemo
+package com.mvvmdemo.viewmodels
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
+import com.mvvmdemo.retrofit.Repository
 
 class CustomFactory(private val repository: Repository) : ViewModelProvider.NewInstanceFactory() {
     @Suppress("UNCHECKED_CAST")

@@ -1,14 +1,11 @@
-package com.mvvmdemo
+package com.mvvmdemo.retrofit
 
-import dagger.Module
-import dagger.Provides
 import okhttp3.HttpUrl
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import javax.inject.Singleton
 
 class APIClient {
     companion object {

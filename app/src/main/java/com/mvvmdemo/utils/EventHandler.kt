@@ -1,10 +1,11 @@
-package com.mvvmdemo
+package com.mvvmdemo.utils
 
 import android.view.View
 import android.widget.Toast
 import androidx.databinding.BaseObservable
 import androidx.databinding.Bindable
 import androidx.databinding.library.baseAdapters.BR
+import com.mvvmdemo.viewmodels.MainViewModel
 
 class EventHandler(private var mainViewModel: MainViewModel) :
     BaseObservable() {

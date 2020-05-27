@@ -1,5 +1,6 @@
-package com.mvvmdemo
+package com.mvvmdemo.retrofit
 
+import com.mvvmdemo.model.PhotosModel
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
