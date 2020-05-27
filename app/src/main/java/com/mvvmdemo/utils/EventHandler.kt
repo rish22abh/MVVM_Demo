@@ -13,7 +13,7 @@ class EventHandler(private var mainViewModel: MainViewModel) :
     fun searchClicked(view: View, searchText: String) {
         if (searchText.isNotEmpty()) {
             setErrorVisibility(View.GONE)
-            mainViewModel.callSearchApi()
+            mainViewModel.callSearchApi(searchText)
         } else {
             setErrorVisibility(View.VISIBLE)
             Toast.makeText(view.context, "clicked-$searchText", Toast.LENGTH_LONG).show()

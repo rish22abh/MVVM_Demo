@@ -11,11 +11,11 @@ class APIClient {
     companion object {
         fun getClient(): Retrofit {
             val httpClient = OkHttpClient.Builder()
-            httpClient.addInterceptor(mInterceptor)
+//            httpClient.addInterceptor(mInterceptor)
 
             val client = httpClient.build()
             return Retrofit.Builder()
-                .baseUrl("https://api.unsplash.com")
+                .baseUrl("https://recipesapi.herokuapp.com/api/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(client)
                 .build()
