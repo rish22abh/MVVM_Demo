@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MvvmDemo</string>
+    <string name="text_search">Search</string>
+    <string name="enter_search_text">Enter search text</string>
+</resources>
