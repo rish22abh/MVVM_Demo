@@ -1,6 +1,10 @@
 package com.mvvmdemo.model
 
 import android.os.Parcelable
+import android.util.Log
+import android.widget.ImageView
+import androidx.databinding.BindingAdapter
+import com.bumptech.glide.Glide
 import kotlinx.android.parcel.Parcelize
 
 @Parcelize

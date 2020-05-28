@@ -6,6 +6,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.mvvmdemo.R
+import com.mvvmdemo.adapters.FoodAdapter
 import com.mvvmdemo.databinding.ActivityMainBinding
 import com.mvvmdemo.retrofit.Repository
 import com.mvvmdemo.utils.EventHandler
@@ -32,6 +33,7 @@ class MainActivity : BaseActivity() {
 
         mainViewModel.getSearchApi().observe(this, Observer {
             Log.e("Rishabh", "obser-$it")
+            binding.mAdapter = FoodAdapter(this,it!!.recipes)
         })
     }
 }
