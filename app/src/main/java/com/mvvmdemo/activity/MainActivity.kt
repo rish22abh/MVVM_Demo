@@ -15,7 +15,6 @@ import com.mvvmdemo.viewmodels.MainViewModel
 
 class MainActivity : BaseActivity() {
 
-    private lateinit var mAdapter: FoodAdapter
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding: ActivityMainBinding =
@@ -31,7 +30,7 @@ class MainActivity : BaseActivity() {
             ).get(MainViewModel::class.java)
         binding.handler = EventHandler(mainViewModel)
 
-        mAdapter  = FoodAdapter(this)
+        val mAdapter = FoodAdapter(this)
         binding.mAdapter = mAdapter
 
         mainViewModel.getSearchApi().observe(this, Observer {
