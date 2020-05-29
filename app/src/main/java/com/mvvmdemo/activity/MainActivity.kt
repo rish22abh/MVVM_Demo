@@ -31,12 +31,12 @@ class MainActivity : BaseActivity() {
             ).get(MainViewModel::class.java)
         binding.handler = EventHandler(mainViewModel)
 
-        mAdapter  = FoodAdapter(this,ArrayList())
+        mAdapter  = FoodAdapter(this)
         binding.mAdapter = mAdapter
 
         mainViewModel.getSearchApi().observe(this, Observer {
             Log.e("Rishabh", "obser-$it")
-            mAdapter.setData(it!!.recipes)
+            mAdapter.setData(it?.recipes)
         })
     }
 }

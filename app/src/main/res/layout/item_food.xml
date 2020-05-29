@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
+        <import type="android.text.Html"/>
         <variable
             name="mRecipes"
             type="com.mvvmdemo.model.Recipes" />
@@ -35,7 +35,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:padding="5dp"
-                android:text="@{mRecipes.title}"
+                android:text="@{Html.fromHtml(mRecipes.title)}"
                 android:textColor="@android:color/black"
                 android:textSize="16sp"
                 app:layout_constraintLeft_toRightOf="@id/imageView"
