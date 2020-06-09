@@ -4,12 +4,13 @@ import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import com.mvvmdemo.R
+import com.mvvmdemo.dagger_real.DaggerActivity
 
 class SplashActivity : BaseActivity() {
 
     lateinit var mHandler: Handler
     private var mRunnable = Runnable {
-        startActivity(Intent(this, MainActivity::class.java))
+        startActivity(Intent(this, DaggerActivity::class.java))
         finish()
     }
 
